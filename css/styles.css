@@ -1,0 +1,2577 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+:root{
+    --prymari-color: #fe9d2a;
+    --secondary-color: #030921;
+    --third-color: #f84445;
+    --bg-white:#fff;
+    --bg-blue: #f3f4f9;
+    --text-color:#5B6B7A;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+#modal-1{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #00000097;
+    top: -200%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: 1s;
+}
+
+#modal-1.active{
+    top: 0;
+}
+
+#modal-1 .panel {
+    width: 80%;
+    padding: 50px;
+    background: var(--bg-white);
+    position: relative;
+}
+
+.panel h2 {
+    color: var(--secondary-color);
+    font-size: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--text-color);
+    margin-bottom: 12px;
+}
+
+.panel button {
+    background: var(--prymari-color);
+    color: var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 18px;
+}
+
+header{
+    width: 100%;
+    position: relative;
+    background:var(--bg-blue);
+}
+
+/**ESTILOS DE BARRA DE NAVEGACION**/
+
+header nav{
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav.mobile {
+    display: none;
+}
+
+nav.mobile button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--prymari-color);
+    background: #eaeaea;
+    border: 1px solid #bababa;
+
+}
+
+#cont-menu-mobile {
+    width: 50%;
+    position: fixed;
+    right: -100%;
+    background: var(--bg-blue);
+    padding: 20px;
+    top: 89px;
+    z-index: 9;
+    height: 90vh;
+    transition: .5s;
+}
+
+#cont-menu-mobile.active {
+    right: 0;
+}
+
+#cont-menu-mobile a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    border-bottom: 1px solid #cecece;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+header nav ul{
+    display: flex;
+
+}
+
+header nav li{
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+    padding: 20px 0;
+}
+
+header nav li ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background: var(--bg-white);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+}
+
+nav li:hover ul{
+    display: block;
+}
+
+header li a,
+header nav a{
+    text-decoration: none;
+    color: #bebebe;
+    transition: .4s;
+}
+
+ header li a:hover,
+ header nav a:hover{
+    color: var(--prymari-color);
+}
+
+/**ESTILOS DE HERO**/
+
+#hero{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hero .hero-left{
+    width: 50%;
+    padding-left:5% ;
+    padding-right: 80px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.hero-left h3{
+    color:var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.hero-left h1{
+    font-size:80px;
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+.hero-left  .hero-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.hero-buttons a{
+    background: var(--prymari-color);
+    padding: 18px 70px 18px 30px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+.hero-buttons p{
+    font-size: 24px;
+    color: var(--text-color);
+    margin-right: 20PX;
+}
+
+.hero-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid var(--prymari-color);
+    background: #F5E3CF;
+
+}
+
+.hero-buttons button i{
+    color: var(--prymari-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hero-info-left{
+    margin-top: 40px;
+}
+
+.hero-info-left h4{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.hero-info-left p{
+    font-size: 20px;
+    color: var(--text-color);
+    margin-top: 12px;
+}
+.hero-right{
+    width: 50%;
+    min-height: 90vh;
+    background: url('../img/radiator-grille.png');
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: bottom;
+    position: relative;
+}
+
+.hero-right .hero-info-right{
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330px;
+    padding: 40px;
+    clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30px);
+}
+
+.hero-info-right h4{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+.hero-info-right h4 b{
+    color: var(--third-color);
+}
+
+.hero-info-right img{
+    position: absolute;
+    right: 0;
+    top:50px ;
+}
+
+
+/**ESTILOS DE MAIN**/
+
+main{
+    width: 100%;
+    position: relative;
+}
+
+/**ESTILOS DE CONTADOR**/
+
+#counters{
+    width: 100%;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+#counters h3{
+    color: var(--bg-white);
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+#counters p{
+    color: var(--bg-white);
+    font-size: 70px;
+    font-weight: 800;
+}
+
+/**ESTILOS DE ABOUT**/
+
+#about{
+    width: 100%;
+    padding: 180px 0 80px 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about .about-left{
+    width: 60%;
+    padding-right: 70px;
+}
+
+.about-left h3{
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.about-left h2{
+    color: var(--secondary-color);
+    font-size:50px ;
+    font-weight: 800;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+
+.about-left p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-left .fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-left .fila .col-about{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.col-about span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--prymari-color);
+    clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0% 100%);
+}
+
+.col-about span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+.col-about h4{
+    color: var(--prymari-color);
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+.col-about.blue span{
+    background: var(--secondary-color);
+}
+
+.col-about.blue h4{
+    color: var(--secondary-color);
+}
+
+.about-left hr{
+    border-color: var(--text-color);
+    margin: 40px 0;
+    border-top-style: hidden;
+}
+
+
+
+.about-left .col-ceo .datos{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.about-left .datos h3{
+    font-size: 18px;
+    margin: 0;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.about-left .datos p{
+    color: var(--third-color);
+    font-size: 14px;
+}
+
+.about-right{
+    width: 40%;
+    background: url('../img/young-businessman.png');
+    background-size: cover;
+    position: relative;
+}
+
+.about-right button{
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    background: var(--prymari-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -34px;
+    top: 100px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.about-right button i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+/**ESTILOS DE CARLIST**/
+
+#carslist{
+    width: 100%;
+    position: relative;
+    background: var(--bg-blue);
+    padding: 100px 5%;
+}
+
+#carslist .fila-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+#carslist .fila-title .carslist-left{
+    width: 60%;
+}
+
+#carslist .fila-title h3{
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#carslist .fila-title h2{
+    color: var(--secondary-color);
+    font-size:50px ;
+    font-weight: 800;
+}
+
+
+#carslist .fila-title button{
+    background: var(--prymari-color);
+    padding: 18px 70px 18px 30px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+        );
+}
+
+#carslist .fila{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#carslist .fila .col-car{
+    display: flex;
+    width: 48%;
+    background: var(--bg-white);
+    margin-bottom: 50px ;
+    position: relative;
+    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0% 100%, 0 50px);
+}
+
+.col-car .left{
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.col-car .left img{
+    position: absolute;
+    left: -110px;
+    bottom: 14%;
+}
+
+.col-car .right{
+    width: 55%;
+    padding: 30px;
+}
+
+.col-car .right h3{
+    color: var(--secondary-color);
+    font-size: 50px;
+}
+
+.col-car .right h3 span{
+    font-size: 22px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.col-car .right h2{
+    font-size: 20px;
+    color: #2E3E4E;
+}
+
+.col-car ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+
+.col-car ul li{
+    width: 50%;
+    list-style: none;
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.col-car ul li i{
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+.col-car .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.col-car .buttons p{
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.col-car .buttons button{
+    background: transparent;
+    border: 0 solid transparent;
+    color: #b6b6b6;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.col-car .discount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    font-size: 12px;
+    color: var(--bg-white); 
+}
+
+.col-car hr{
+    margin: 20px 0;
+}
+
+
+/**ESTILOS DE CAR RENTAL **/
+
+#car-rentals{
+    width: 100%;
+    position: relative;
+    padding: 150px 5% 100px;
+    text-align: center;
+}
+
+#car-rentals h3{
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+#car-rentals h2{
+    color: var(--secondary-color);
+    font-size:50px ;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#car-rentals .fila{
+    width: 95%;  
+    margin: 0 auto;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 380px;
+    left: 5%;
+}
+
+#car-rentals .fila .item{
+    width: 35%;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+#car-rentals .item span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0% 100%);
+}
+
+#car-rentals span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+#car-rentals .info{
+    width: 80%;
+    padding-left: 12px;
+}
+
+#car-rentals .info h4{
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+#car-rentals .info p{
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/**ESTILOS DE BRAND**/
+
+#brands{
+    width: 100%;
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 60px 0;
+}
+
+#brands img{
+    margin: 0 20px;
+    filter: grayscale(1);
+}
+
+/**ESTILOS DE TESTIMONIOS**/
+
+#testimonials{
+    width: 100%;
+    position: relative;
+    padding: 150px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#testimonials .left{
+    width: 50%;
+    padding-right: 80px;
+}
+
+#testimonials .left h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#testimonials .left h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#testimonials .left p{
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+#testimonials .left button{
+    background: var(--prymari-color);
+    padding: 18px 70px 18px 30px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    border-color: transparent;
+    margin-top: 40px;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+        );
+}
+
+#testimonials .right{
+    width: 50%;
+}
+
+#testimonials .card-testimonial{
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-blue);
+    margin: 30px 0;
+    display: flex;
+}
+
+#testimonials .card-testimonial img{
+    width: 60px;
+    height: 60px;
+}
+
+#testimonials .card-testimonial .info{
+    width: 80%;
+    margin-left: 20px;
+}
+
+#testimonials .info h4{
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#testimonials .info h5{
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#testimonials .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#testimonials .stars{
+    display: flex;
+    align-items: center;
+}
+
+#testimonials .stars i{
+    font-size: 14px;
+    color: var(--prymari-color);
+    margin: 0 3px;
+}
+
+#testimonials .stars p{
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#testimonials .stars p b{
+    color: var(--prymari-color);
+    font-weight: 400;
+}
+
+/** ESTILOS DE BLOG**/
+
+#blog{
+    width: 100%;
+    text-align: center;
+    padding: 20px 5% 80px;
+    position: relative;
+}
+
+#blog h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#blog h2{
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#blog .fila{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#blog .fila .col-blog{
+    width: 46%;
+    background: var(--bg-blue);
+    position: relative;
+}
+
+#blog .col-blog .info{
+    padding: 24px;
+    text-align: left;
+}
+
+#blog .col-blog img{
+    width: 100%;
+}
+
+#blog .info h4{
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+#blog .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+#blog .info .fila{
+    border-top: 1px solid #bebebe;
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#blog .info .fila .autor{
+    display: flex;
+    align-items: center;
+}
+
+#blog .info .fila .autor img{
+    width: 40px;
+}
+
+#blog .autor p{
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+#blog .info .fila p{
+    margin-bottom: 0;
+}
+
+#blog .info p i{
+    margin-right: 8px;
+}
+
+#blog .fila .info a{
+    color: #bebebe;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#blog  .category{
+    position: absolute;
+    background: var(--secondary-color);
+    color: var(--bg-white);
+    font-size: 14px;
+    padding: 8px 12px;
+    left: 0;
+    top: 20px;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
+}
+
+#blog button{
+    background: #deddde;
+    padding: 18px 40px 18px 30px;
+    color: rgb(180, 178, 178);
+    font-size: 20px;
+    text-decoration: none;
+    margin: 60px;
+    border-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+        );
+    }
+
+
+/**ESTILOS DE FOOTER**/
+
+footer{
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 50px 5%;
+}
+
+footer .fila{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+footer .fila .col-footer{
+    width: 30%;
+}
+
+footer .fila .col-footer a img{
+    margin-bottom: 30px;
+}
+
+footer .fila .col-footer h3{
+    color: var(--prymari-color);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+
+footer .fila .col-footer i{
+    margin-right: 8px;
+}
+
+footer .fila .col-footer ul{
+    display: flex;
+}
+
+footer .fila .col-footer ul a{
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .fila .col-footer ul p{
+    margin: 0 25px;
+}
+
+footer hr{
+    margin: 20px 0;
+}
+
+footer .fila p{
+    color: var(--bg-white);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+/**ESTILOS DE LOS DEMAS INDEX**/
+
+
+
+/**ESTILOS DE ABOUT US**/
+
+/* Mejoras para el modal de video (#modal-2) */
+#modal-2{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para mayor contraste */
+    top: -150%; /* Se mantiene la lógica de ocultar/mostrar */
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: all 0.5s ease-in-out; /* Transición más suave y rápida */
+    opacity: 0; /* Oculto por defecto con opacidad */
+    pointer-events: none; /* Evita interacciones cuando está oculto */
+}
+
+#modal-2.active{
+    top: 0;
+    opacity: 1; /* Visible cuando está activo */
+    pointer-events: auto; /* Permite interacciones cuando está visible */
+}
+
+/* Mejoras para el panel dentro del modal */
+#modal-2 .panel {
+    width: 90%; /* Un poco más ancho para aprovechar el espacio */
+    max-width: 900px; /* Limita el ancho máximo para pantallas grandes */
+    padding: 30px; /* Reducir un poco el padding para pantallas pequeñas */
+    background: var(--bg-white);
+    position: relative;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para profundidad */
+    transform: translateY(-20px); /* Pequeña animación al aparecer */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* Para el iframe, el panel necesita un padding-bottom si el iframe es el único elemento
+       que debe mantener la relación de aspecto. Sin embargo, como hay un h2 y un botón,
+       aplicar padding-bottom aquí afectaría todo el panel, no solo el video.
+       Por lo tanto, haremos el iframe responsivo por sí mismo con width: 100% y max-height. */
+}
+
+#modal-2.active .panel {
+    transform: translateY(0); /* Vuelve a su posición original al aparecer */
+}
+
+.panel h2 {
+    color: var(--secondary-color);
+    font-size: 28px; /* Ajuste de tamaño para mejor legibilidad */
+    padding-bottom: 15px; /* Más espacio debajo del título */
+    border-bottom: 1px solid #e0e0e0; /* Borde más sutil */
+    margin-bottom: 20px; /* Más margen inferior */
+    text-align: center; /* Centrar el título del modal */
+}
+
+/* Mejoras para el botón de cerrar del modal */
+.panel button {
+    background: var(--third-color); /* Usar el color rojo para el botón de cerrar */
+    color: var(--bg-white); /* Color de texto blanco */
+    width: 45px; /* Un poco más grande */
+    height: 45px; /* Un poco más grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Eliminar borde */
+    border-radius: 50%;
+    position: absolute;
+    right: -15px; /* Moverlo un poco fuera del panel */
+    top: -15px; /* Moverlo un poco fuera del panel */
+    font-size: 22px; /* Ícono más grande */
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.panel button:hover {
+    background-color: #d83031; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Estilo para el iframe del video (sin un div wrapper) */
+#modal-2 .panel iframe {
+    width: 100%; /* Ocupa todo el ancho disponible del panel */
+    height: 450px; /* Se mantiene la altura original del HTML */
+    max-height: 70vh; /* Limita la altura máxima en pantallas grandes */
+    display: block; /* Elimina cualquier espacio extra debajo del iframe */
+    margin: 0 auto; /* Centra el iframe si no ocupa el 100% de ancho */
+    border: 0; /* Asegura que no haya borde */
+    /* Nota: Sin un div contenedor con padding-bottom, el iframe no mantendrá
+       una relación de aspecto perfecta en altura si su ancho cambia mucho,
+       debido a la limitación de no modificar el HTML. Sin embargo,
+       width: 100% y max-height: 70vh ayudarán a que se adapte mejor. */
+}
+
+#hero-about{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/about-us-hero.png");
+    /* CAMBIAR LA VARIABLE POR UNA IMAGEN */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-about img{
+    width: 100%;
+    height: 40px;
+}
+
+#hero-about h1{
+    color: var(--bg-white);
+    font-size: 60px; /* Tamaño de título impactante */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/**ESTILOS DE SEGUNDA SECCION DE ABOUT-US.HTML  #our-philosophy**/
+
+#our-philosophy {
+    width: 100%;
+    padding: 100px 5%; /* Ajusta el padding para la sección */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-blue); /* Fondo similar a otras secciones */
+}
+
+#our-philosophy .philosophy-left {
+    width: 45%; /* Ancho para la columna izquierda (imagen) */
+    min-height: 400px; /* Altura mínima para la imagen */
+    display: flex; /* Para centrar la imagen dentro del div */
+    justify-content: center;
+    align-items: center;
+    /* Si la imagen es un fondo, usa background-image aquí */
+    /* background: url("../img/our-philosophy-image.png") no-repeat center center; */
+    /* background-size: cover; */
+}
+
+#our-philosophy .philosophy-left img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Pequeños bordes redondeados para la imagen */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+#our-philosophy .philosophy-right {
+    width: 50%; /* Ancho para la columna derecha (contenido) */
+    padding-left: 30px; /* Espacio entre la imagen y el texto */
+}
+
+#our-philosophy .philosophy-right h3 {
+   color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#our-philosophy .philosophy-right h2 {
+    color: var(--secondary-color);
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#our-philosophy .value-item {
+    display: flex;
+    align-items: flex-start; /* Alinea el ícono con el inicio del texto */
+    margin-bottom: 30px; /* Espacio entre cada ítem de valor */
+}
+
+#our-philosophy .value-item .icon-circle {
+    width: 60px;
+    height: 60px;
+    min-width: 60px; /* Asegura que el círculo no se encoja */
+    min-height: 60px; /* Asegura que el círculo no se encoja */
+    background: var(--secondary-color); /* Color de fondo del círculo */
+    border-radius: 50%; /* Hace el círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Espacio entre el ícono y el texto */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#our-philosophy .value-item .icon-circle i {
+    color: var(--prymari-color); /* Color del ícono */
+    font-size: 28px;
+}
+
+#our-philosophy .value-item .value-info h4 {
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#our-philosophy .value-item .value-info p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/**ESTILOS DE PAGINA VEHICLES**/
+
+
+
+/*hero*/
+    
+#hero-vehicles {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hero-vehicl.jpg");
+    /* CAMBIAR LA VARIABLE POR UNA IMAGEN */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero-vehicles img{
+    width: 100%;
+    height: 40px;
+    
+}
+#hero-vehicles h1{
+    color: var(--bg-white);
+    font-size: 60px; /* Tamaño de título impactante */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+/*Carros extra en carlist*/
+/* Estilo para ocultar inicialmente el contenedor de autos adicionales */
+#additional-cars-container {
+    display: none; /* Oculto por defecto */
+    flex-wrap: wrap; /* Asegura que los autos se envuelvan */
+    justify-content: space-between; /* Mantiene el espaciado entre autos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 50px; /* Espacio entre los primeros autos y los adicionales */
+}
+
+
+#additional-cars-container.active {
+    opacity: 1;
+    transform: translateY(0);
+} 
+/* Clase de utilidad para ocultar elementos */
+.hidden {
+    display: none !important; /* Usar !important para asegurar que se aplique */
+}
+
+
+
+
+/* Estilos para la sección de videos */
+#videos-autos {
+    padding: 80px 0; /* Espaciado interno superior e inferior */
+    background-color: var(--bg-white); /* Color de fondo para distinguirla */
+    text-align: center;
+}
+
+#videos-autos .container {
+    max-width: 1200px; /* Ancho máximo, ajusta según el ancho de tu contenido principal */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 20px; /* Padding lateral para evitar que el contenido toque los bordes en móvil */
+}
+
+#videos-autos .fila-title {
+    /* Mantiene los estilos de tus títulos, pero asegúrate que no tengan 'width: 100%' rígido */
+    margin-bottom: 50px;
+    display: flex; /* Asegura que 'carslist-left' se comporte como antes */
+    justify-content: center; /* Centra el contenido del título */
+    text-align: center; /* Asegura que el texto dentro del título esté centrado */
+    flex-direction: column; /* Apila h3 y h2 si es necesario */
+}
+
+#videos-autos .fila-title h3 {
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#videos-autos .fila-title h2 {
+    color: var(--secondary-color);
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.videos-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los videos se envuelvan a la siguiente línea */
+    justify-content: space-between; /* Distribuye el espacio entre los videos */
+    gap: 30px; /* Espacio entre las columnas de videos (más moderno que margin-right/bottom) */
+}
+
+.col-video {
+    flex: 1 1 calc(50% - 15px); /* Dos columnas: 50% de ancho menos la mitad del gap */
+    max-width: calc(50% - 15px); /* Asegura que no se estire demasiado */
+    background-color: var(--bg-white); /* Color de fondo para cada tarjeta de video */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen al iframe */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para cada tarjeta */
+    padding-bottom: 20px; /* Espacio interno en la parte inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro de la tarjeta */
+    text-align: center;
+}
+
+.col-video h3 {
+    font-size: 1.3em;
+    color: var(--secondary-color);
+    margin: 20px 15px 0; /* Margen superior y lateral para el título del video */
+    line-height: 1.4;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura / ancho) */
+    height: 0;
+    overflow: hidden;
+    width: 100%; /* El contenedor del video ocupa todo el ancho de su padre */
+    border-bottom: 5px solid var(--prymari-color); /* Una línea de color debajo del video */
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+/**ESTILOS DE PAGINA RENTALS**/
+
+
+
+    /*hero*/
+    
+#hero-rentals{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hero-rentals2.jpg");
+    /* CAMBIAR LA VARIABLE POR UNA IMAGEN */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero-rentals img{
+    width: 100%;
+    height: 40px;
+    
+}
+#hero-rentals h1{
+    color: var(--bg-white);
+    font-size: 60px; /* Tamaño de título impactante */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+/* Sección de Preguntas Frecuentes (FAQ) */
+#faq-rentals {
+    padding: 0px 0px 150px 0;
+    background-color: var(--bg-white); /* Un color de fondo suave para diferenciarla */
+    text-align: center;
+}
+
+#faq-rentals .container {
+    max-width: 900px; /* Un poco más estrecho para centrar el contenido */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-title {
+    margin-bottom: 50px;
+}
+
+.faq-title h3 {
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.faq-title h2 {
+    color: var(--secondary-color);
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los ítems FAQ */
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Para que el contenido oculto no se vea */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    background-color: var(--bg-blue); /* Color de fondo de la pregunta */
+    color: var(--secondary-color); /* Color del texto de la pregunta */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--prymari-color); /* Cambia al color primario al pasar el ratón */
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 1.15em;
+}
+
+.faq-question i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg); /* Rota el icono cuando está activo */
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0; /* Oculta la respuesta por defecto */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Animación de expansión/colapso */
+    background-color: #f9f9f9; /* Color de fondo de la respuesta */
+    color: var(--text-color); /* Color del texto de la respuesta */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Ajusta este valor según la altura máxima esperada de tu respuesta */
+    padding: 20px 25px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+/* --- ESTILOS DE LA PAGINA CONTACT US --- */
+
+/* Sección Hero de Contacto */
+#hero-contact {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hero-rentals3.jpg");
+    /* CAMBIAR LA VARIABLE POR UNA IMAGEN */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-contact img{
+    width: 100%;
+    height: 40px;
+    
+}
+
+#hero-contact h1 {
+    color: var(--bg-white);
+    font-size: 60px; /* Tamaño de título impactante */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Sección de Contacto (Formulario y Detalles) */
+#contact-details {
+    width: 100%;
+    padding: 100px 5%; /* Espaciado interno */
+    background-color: var(--bg-blue); /* Fondo para la sección */
+}
+
+#contact-details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos al inicio */
+}
+
+.contact-info {
+    width: 45%; /* Ancho para la información de contacto */
+    padding-right: 30px; /* Espacio entre info y formulario */
+}
+
+.contact-info h3 {
+    color: var(--third-color);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.contact-info h2 {
+    color: var(--secondary-color);
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.contact-info p {
+    color: var(--text-color);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* Espacio entre cada ítem de info */
+}
+
+.contact-info .info-item i {
+    font-size: 28px;
+    color: var(--prymari-color); /* Color del ícono principal */
+    width: 50px; /* Ancho fijo para alinear iconos */
+    text-align: center;
+    flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.contact-info .info-item .text {
+    margin-left: 15px;
+}
+
+.contact-info .info-item .text h4 {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-info .info-item .text p {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 0; /* Elimina margen inferior extra */
+}
+
+.contact-form {
+    width: 50%; /* Ancho para el formulario */
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
+}
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: #fcfcfc;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--prymari-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.contact-form .submit-button {
+    background: var(--prymari-color);
+    color: var(--bg-white);
+    padding: 18px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+.contact-form .submit-button:hover {
+    background-color: #e68a1a; /* Un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+
+/* Sección de Mapa */
+#contact-map {
+    width: 100%;
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--bg-white); /* Fondo para la sección del mapa */
+}
+
+#contact-map h2 {
+    color: var(--secondary-color);
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el iframe respete el border-radius */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra para el mapa */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 500px; /* Altura fija para el mapa */
+    border: 0;
+}
+
+
+
+
+
+
+/* EL CODIGO DE RESPONSIVE QUE VAMOS A REALIZAR, SE HARÁ A PARTIR DE RANGOS DE TAMAÑOS POR DISPOSITIVOS */
+
+/* ESTILOS DESKTOP */
+@media screen and (min-width:1921) and (max-width:4200px) {
+    
+}
+
+
+/* ESTILOS PORTATIL */
+
+@media screen and (min-width: 1025px) and (max-width:1920) {
+
+}
+
+
+/* ESTILOS TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* ESTILOS RESPONSIVE DE NAV */
+
+    header nav {
+        display: none;
+    }
+
+    header nav.mobile {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: var(--bg-blue);
+        z-index: 9;
+    }
+
+    /* nav.mobile button{
+        background: transparent;
+        color: var(--prymari-color);
+        font-size: 30px;
+        margin-top: 10px;
+        border-color: transparent;
+        cursor: pointer;
+        
+    } */
+
+
+    /* ESTILOS RESPONSIVE DE HERO */
+    #hero .hero-left {
+        width: 100%;
+        text-align: center;
+        padding-right: 5%;
+        padding-bottom: 10px;
+    }
+
+    .hero-left h3{
+        font-weight: 400;
+        margin-top: 80px;
+        font-size: 25px;
+    }
+
+    .hero-left h1{
+        font-size: 80px;
+    }
+    
+    #hero .hero-buttons {
+    justify-content: center;
+    margin-top: 50px;
+    }
+
+    .hero-info-left{
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+    
+    .hero-info-left {
+        text-align: left;
+    }
+    
+    .hero-right {
+        width: 100%;
+        min-height: 70vh;
+    }
+
+    /* ESTILOS RESPONSIVE DE COUNTERS */
+
+    #counters{
+        height: 42vh;
+        flex-wrap: wrap;
+    }
+
+    #counters .col-counter{
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+
+    /* ESTILOS RESPONSIVE DE ABOUT */
+    #about {
+        padding: 180px 5% 80px 5%;
+    }
+
+    #about .about-left{
+        width: 100%;
+        height: 65vh;
+        padding-right: 0;
+    }
+
+    .about-right{
+        width: 100%;
+        height: 40vh;
+        justify-content: center;
+        margin-bottom: 150px;
+        margin-top: 70px;
+    }
+
+    .about-right button{
+        position: absolute;
+        top: -34px;
+        left: 300px;
+    }
+
+    /* ESTILOS RESPONSIVE DE CARLIST */
+    #carslist .fila-title{
+        flex-wrap: wrap
+    }
+
+    #carslist .fila-title .carslist-left{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #carslist .carslist-right{
+        width: 100%;
+    }
+
+    #carslist .fila .col-car{
+        width: 100%;
+    }
+
+    /* ESTILOS RESPONSIVE DE CAR-RENTALS */
+
+    #car-rentals .fila {
+        position: relative;
+        display: block;
+        flex-wrap: wrap;
+        top: 0;
+    }
+    
+    #car-rentals .fila .item {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    
+    #car-rentals .item span {
+        position: relative; /* ya no es absolute */
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    
+    #car-rentals .item i {
+        font-size: 30px;
+    }
+    
+    #car-rentals .info {
+        width: calc(100% - 75px); /* ícono + espacio */
+    }
+    
+    #car-rentals .info p {
+        margin-top: 10px;
+    }
+
+    /* ESTILOS RESPONSIVE DE BRANDS */
+    #brands {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    /* ESTILOS RESPONSIVE DE TESTIMONIOS */
+
+    #testimonials .left {
+        width: 100%;
+    }
+
+    #testimonials .right {
+        width: 100%;
+    }
+
+    /* ESTILOS RESPOSIVE DE BLOG */
+
+
+    #blog .fila .col-blog {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    /* ESTILOS RESPONSIVE DE FOOTER */
+    footer .fila {
+        width: 100%;
+        display: block;
+    }
+
+    footer .fila .col-footer {
+        margin-bottom: 50px;
+        width: 50%;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+
+
+
+
+
+    /* Responsive de index about-us */
+
+    #hero-about {
+        height: 50vh; /* Menos altura en móviles */
+        background-position-y: center   ;
+    }
+    #hero-about h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+
+    /* --- Media Queries para la nueva sección #our-philosophy en Smartphone --- */
+     #our-philosophy {
+        padding: 80px 5%;
+    }
+    #our-philosophy .philosophy-left,
+    #our-philosophy .philosophy-right {
+        width: 100%; /* Las columnas se apilan */
+        padding-left: 0;
+        margin-bottom: 40px; /* Espacio entre las secciones apiladas */
+    }
+    #our-philosophy .philosophy-left {
+        min-height: 300px; /* Ajusta la altura mínima de la imagen */
+    }
+    #our-philosophy .philosophy-right h2 {
+        font-size: 38px;
+        text-align: center; /* Centra el título en tablet */
+    }
+    #our-philosophy .philosophy-right h3 {
+        text-align: center; /* Centra el subtítulo en tablet */
+    }
+    #our-philosophy .value-item {
+        justify-content: center; /* Centra los ítems en tablet */
+        flex-wrap: wrap; /* Permite que el ícono y el texto se envuelvan si es necesario */
+        text-align: center;
+    }
+    #our-philosophy .value-item .icon-circle {
+        margin-right: 0; /* Elimina el margen a la derecha del ícono */
+        margin-bottom: 15px; /* Añade margen inferior al ícono */
+    }
+    #our-philosophy .value-item .value-info {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+
+
+    /*Responsive de pagina vehicles*/
+    #hero-vehicles {
+        height: 50vh; /* Menos altura en móviles */
+        background-position-y: center   ;
+    }
+    #hero-vehicles h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+    .col-video {
+        flex: 1 1 calc(100% - 15px); /* Una columna en pantallas más pequeñas */
+        max-width: calc(100% - 15px);
+    }
+
+    /*Responsive de paagina rentals*/
+    #hero-rentals {
+        height: 50vh; /* Menos altura en móviles */
+        background-position-y: center   ;
+    }
+    #hero-rentals h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+
+
+
+    /*Responsive de pagina contact-us*/
+    #hero-contact {
+        height: 50vh; /* Menos altura en móviles */
+    }
+    #hero-contact h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+    #contact-details .container {
+        flex-direction: column; /* Apila las columnas */
+    }
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Ocupa todo el ancho */
+        padding-right: 0; /* Elimina el padding extra */
+        margin-bottom: 40px; /* Espacio entre info y formulario */
+    }
+    .contact-info h2 {
+        font-size: 36px;
+    }
+    .contact-form {
+        padding: 30px; /* Menos padding en móvil */
+    }
+    #contact-map {
+        padding: 60px 5%; /* Menos padding en móvil */
+    }
+    #contact-map h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .map-container iframe {
+        height: 350px; /* Menos altura para el mapa en móvil */
+    }
+} 
+
+/* ESTILOS SMARTPHONE */
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    
+    /* ESTILOS RESPONSIVE DE NAV */
+
+    header nav {
+        display: none;
+    }
+
+                            /* !PENDIENTE */
+     header nav.mobile {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: var(--bg-blue);
+        z-index: 9;
+    }
+
+    /* ESTILOS RESPONSIVE DE VIDEO */
+
+    #modal-1 .panel {
+        width: 100%;
+        height: 100%;
+    }
+    .panel button{
+        right: 10px;
+        top: 10px;
+    }
+    
+
+    #hero{
+        padding-top: 80px;
+    }
+    /* nav.mobile button{
+        background: transparent;
+        color: var(--prymari-color);
+        font-size: 30px;
+        margin-top: 10px;
+        border-color: transparent;
+        cursor: pointer;
+    } */
+
+
+    /* ESTILOS RESPONSIVE DE HERO */
+    #hero .hero-left {
+    width: 100%;
+    text-align: center;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    }
+
+
+    .hero-left h1{
+        font-size: 50px;
+    }
+
+    #hero .hero-buttons {
+    justify-content: center;
+    margin-top: 50px;
+    }
+
+    .hero-buttons a{
+        padding: 15px 70px 15px 30px;
+        font-size: 17px;
+    }
+
+    .hero-buttons p{
+        font-size: 18px;
+    }
+
+    .hero-buttons button{
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-info-left{
+        margin-top: 80px;
+    }
+
+    .hero-info-left {
+    text-align: left;
+    }
+
+    .hero-info-left p{
+        font-size: 15px;
+    }
+
+    .hero-right {
+        width: 100%;
+        min-height: 60vh;
+        background-position-x: center;
+    }
+
+    .hero-right .hero-info-right{
+        padding: 35px;
+        width: 325px;
+    }
+
+    .hero-info-right h4{
+        font-size: 18px;
+    }
+
+    .hero-info-right img{
+        top: 20px;
+    }
+
+    /* ESTILOS RESPONSIVE DE COUNTERS */
+
+    #counters{
+        padding: 60px 5% 30px;
+        flex-wrap: wrap;
+    }
+
+    #counters .col-counter{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #counters p {
+        font-size: 60px;
+        font-weight: 650;
+    }
+
+    /* ESTILOS RESPONSIVE DE ABOUT */
+    #about {
+        background: #e6e6e6;
+        padding: 150px 5% 70px 5%;
+    }
+
+    #about .about-left{
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .about-left h3{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .about-left h2{
+        font-size: 29px;
+        padding-right: 0;
+    }
+
+    .about-left p{
+        font-size: 15px;
+    }
+
+    .col-about span{
+        width: 55px;
+        height: 55px;
+    }
+    .col-about span i{
+        font-size: 20px;
+    }
+
+    .col-about h4{
+        font-size: 16px;
+    }
+
+    .about-left .fila .col-ceo{
+        width: 60%;
+        display: flex;/* Horizontal */
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .about-left .col-ceo .datos{
+        margin-left: 10px;
+        justify-content: center;
+    }
+
+    #about .about-left .fila .col-ceo-img{
+        width: 40%;
+        display: flex;
+        justify-content: center;  /*Horizontal */
+        align-items: center;  
+    }
+
+    #about .about-left .fila .col-ceo-img img{
+        width: 100%;
+    }
+
+    .about-left .datos h3{
+        font-size: 13px;
+        margin-bottom: 0;
+        padding: 2px;
+    }
+
+    .about-left .datos p{
+        font-size: 10px;
+        margin-bottom: 0;
+        padding: 2px;
+    }
+
+    .about-right{
+        width: 100%;
+        height: 30vh;
+        justify-content: center;
+        margin-top: 70PX;
+        margin-bottom: 70px;
+    }
+
+    .about-right button{
+        position: absolute;
+        top: -34px;
+        left: 150px;
+    }
+
+    /* ESTILOS RESPONSIVE DE CARLIST */
+
+    
+    #carslist .fila-title{
+        flex-wrap: wrap
+    }
+
+    #carslist .fila-title .carslist-left{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #carslist .fila-title h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    #carslist .fila-title h2{
+        font-size: 29px;
+    }
+
+    #carslist .fila-title button{
+        padding: 13px 50px 13px 30px;
+        font-size: 17px;
+    }
+
+    #carslist .carslist-right{
+        width: 100%;
+    }
+
+    #carslist .fila .col-car{
+        width: 100%;
+    }
+
+    .col-car .left{
+        width: 0;
+    }
+
+    .col-car .left img{
+        display: none;
+    }
+
+    .col-car .right{
+        width: 100%;
+        padding: 30px 30px;
+    }
+
+    .col-car hr{
+        margin: 10px 0;
+    }
+
+    .col-car ul li{
+        margin: 5px 0;
+    }
+
+    .col-car .buttons{
+        margin-top: 15px;
+    }
+
+    /* ESTILOS RESPONSIVE DE CAR-RENTALS */
+    #car-rentals h3{
+        font-size: 18px;
+    }
+    #car-rentals h2{
+        font-size: 29px;
+    }
+
+    #car-rentals .fila {
+        position: relative;
+        display: block;
+        flex-wrap: wrap;
+        top: 0;
+    }
+    
+    #car-rentals .fila .item {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    
+    #car-rentals .item span {
+        position: relative; /* ya no es absolute */
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    
+    #car-rentals .item i {
+        font-size: 30px;
+    }
+    
+    #car-rentals .info {
+        width: calc(100% - 75px); /* ícono + espacio */
+    }
+    
+    #car-rentals .info p {
+        margin-top: 10px;
+    }
+    /* ESTILOS RESPONSIVE DE BRANDS */
+    #brands {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    /* ESTILOS RESPONSIVE DE TESTIMONIOS */
+    #testimonials  {
+        background-color: #e6e6e6;
+        padding: 150px 5% 100px;
+    }
+
+    #testimonials .left {
+        width: 100%;
+    }
+
+    #testimonials .left h3{
+        font-size: 18px;
+    }
+
+    #testimonials .left h2{
+        font-size: 29px;
+    }
+
+    #testimonials .left p{
+        font-size: 15px;
+    }
+
+    #testimonials .left button{
+        padding: 12px 50px 12px 30px;
+        font-size: 17px;
+    }
+
+    #testimonials .right {
+        width: 100%;
+    }
+
+    /* ESTILOS RESPOSIVE DE BLOG */
+    #blog {
+        background: #e6e6e6;
+    }
+
+    #blog h3{
+        font-size: 18px;    
+    }
+
+    #blog h2{
+        font-size: 29px;
+    }
+
+    #blog .fila .col-blog {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #blog .info .fila .autor p{
+        display: flex;
+    }
+
+    #blog .info .fila p{
+        display: none;
+    }
+
+    #blog button{
+        padding: 15px 50px 15px 30px;
+        font-size: 18px;
+    }
+
+    /* ESTILOS RESPONSIVE DE FOOTER */
+    footer .fila {
+        width: 100%;
+        display: block;
+    }
+
+    footer .fila .col-footer {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    footer .fila .col-footer ul p{
+        margin: 0 25px;
+    }
+
+    /*ESCROLL HORIZONTAL*/
+    html, body {
+        overflow-x: hidden;
+    }
+
+    header nav {
+        display: none;
+    }
+    .cont-vehiculo img{
+        width: 100%;
+    }
+
+
+
+/*Responsive de pagina about-us*/
+    #hero-about {
+        height: 70vh; /* Menos altura en móviles */
+        background-position-y: center   ;
+    }
+    #hero-about h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+
+    /* --- Media Queries para la nueva sección #our-philosophy en Smartphone --- */
+     #our-philosophy {
+        padding: 80px 5%;
+    }
+    #our-philosophy .philosophy-left,
+    #our-philosophy .philosophy-right {
+        width: 100%; /* Las columnas se apilan */
+        padding-left: 0;
+        margin-bottom: 40px; /* Espacio entre las secciones apiladas */
+    }
+    #our-philosophy .philosophy-left {
+        min-height: 300px; /* Ajusta la altura mínima de la imagen */
+    }
+    #our-philosophy .philosophy-right h2 {
+        font-size: 32px;
+        text-align: center; /* Centra el título en tablet */
+    }
+    #our-philosophy .philosophy-right h3 {
+        font-size: 18px;
+        text-align: center; /* Centra el subtítulo en tablet */
+    }
+    #our-philosophy .value-item {
+        justify-content: center; /* Centra los ítems en tablet */
+        flex-wrap: wrap; /* Permite que el ícono y el texto se envuelvan si es necesario */
+        text-align: center;
+    }
+    #our-philosophy .value-item .icon-circle {
+        margin-right: 0; /* Elimina el margen a la derecha del ícono */
+        margin-bottom: 15px; /* Añade margen inferior al ícono */
+    }
+    #our-philosophy .value-item .value-info {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+
+
+    /*Responsive de pagina vehicles*/
+    #hero-vehicles {
+        height: 70vh; /* Menos altura en móviles */
+        background-position-y: top;
+    }
+    #hero-vehicles h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+    .col-video {
+        flex: 1 1 calc(100% - 15px); /* Una columna en pantallas más pequeñas */
+        max-width: calc(100% - 15px);
+    }
+    #videos-autos .fila-title h3{
+        font-size: 18px;
+    }
+    #videos-autos .fila-title h2{
+        font-size: 29px;
+    }
+
+    /*Responsive de paagina rentals*/
+    #hero-rentals {
+        height: 70vh; /* Menos altura en móviles */
+        background-position-y: top;
+    }
+    #hero-rentals h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+    .faq-title h3{
+        font-size: 18px;
+    }
+    .faq-title h2 {
+        font-size: 29px;
+    }
+    .faq-question h4{
+        font-size: 15px;
+    }
+    .faq-answer p{
+        font-size: 12px;
+    }
+
+
+    /*Responsive de pagina contact-us*/
+    #hero-contact {
+        height: 70vh; /* Menos altura en móviles */
+    }
+    #hero-contact h1 {
+        font-size: 40px; /* Título más pequeño */
+    }
+    #contact-details .container {
+        flex-direction: column; /* Apila las columnas */
+    }
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Ocupa todo el ancho */
+        padding-right: 0; /* Elimina el padding extra */
+        margin-bottom: 40px; /* Espacio entre info y formulario */
+    }
+    .contact-info h2 {
+        font-size: 36px;
+    }
+    .contact-form {
+        padding: 30px; /* Menos padding en móvil */
+    }
+    .contact-info h2 {
+        font-size: 30px;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    .contact-form .submit-button {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+     #contact-map {
+        padding: 60px 5%; /* Menos padding en móvil */
+    }
+    #contact-map h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .map-container iframe {
+        height: 350px; /* Menos altura para el mapa en móvil */
+    }
+    .map-container iframe {
+        height: 280px; /* Aún menos altura en pantallas muy pequeñas */
+    }
+
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIVEWAYS</title>
+    <link rel="icon" href="img/Logo-w.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <header>
+    <nav>
+        <a href="index.html" id="logo"><img src="img/logo.png" alt="Logo web site"></a>
+        <ul>
+            <li data-aos="fade-down" data-aos-duration="1000" >
+                <a href="#hero">HOME</a>
+                <!-- <ul>
+                    <li><a href="#">HOME 1</a></li>
+                    <li><a href="#">HOME 2</a></li>
+                </ul> -->
+            </li>
+            <li data-aos="fade-down" data-aos-duration="1200" ><a href="about-us.html">ABOUT US</a></li>
+            <li data-aos="fade-down" data-aos-duration="1400" ><a href="vehicles.html">VEHICLES</a></li>
+            <li data-aos="fade-down" data-aos-duration="1600"><a href="rentals.html">RENTALS</a></li>
+            <!-- <li data-aos="fade-down" data-aos-duration="1400" ><a href="#testimonials">TESTIMONIALS</a></li> -->
+            <!-- <li data-aos="fade-down" data-aos-duration="1400" ><a href="#blog">BLOG</a></li>     -->
+        </ul>
+        <a href="contact-us.html" data-aos="fade-down" data-aos-duration="1800" >CONTACT US</a>
+    </nav>
+
+    <nav class="mobile" data-aos="fade-left" data-aos-duration="700">
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        <button onclick="menuMobile()"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <div id="cont-menu-mobile" >
+        <a href="#hero">HOME</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="vehicles.html">VEHICLES</a>
+        <a href="rentals.html">RENTALS</a>
+        <!-- <a href="#testimonials">TESTIMONIALS</a>
+        <a href="#blog">BLOG</a> -->
+        <a href="contact-us.html">CONTACT US</a>
+    </div>
+
+    <div id="hero">
+        <div class="hero-left"  data-aos="fade-right" data-aos-duration="700">
+            <h3>PLAN YOUR TRIP NOW</h3>
+            <h1>EXPLORE THE WORLD WITH US</h1>
+            <div class="hero-buttons">
+                <a href="#">Book A Ride</a>
+                <p>OR</p>
+                <button onclick="modalVideo()" data-aos="zoom-in" data-aos-duration="1900" ><i class="fa-solid fa-play"></i></button>
+            </div>
+                <div class="hero-info-left">
+                    <h4>WHAT'S NEW--------------------------0</h4>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odio, cumque repudiandae rem delectus beatae.</P>
+                </div>
+        </div>        
+        <div class="hero-right" data-aos="fade-left" data-aos-duration="700" >
+            <div class="hero-info-right">
+                <h4>GET <b>10%</b> OFF FOR <br>FAMILY CAR <br>TYPE</h4>
+                <img src="img/studio-shot-of-three.png" alt="Vehiculo Familiar">
+            </div>
+        </div>
+    </div>
+
+
+ </header>
+
+
+    <main>
+
+
+        <section id="counters">
+            <div class="col-counter" data-aos="zoom-in-up" data-aos-duration="200">
+                <h3>CAR RENTED</h3>
+                <p>240</p>
+            </div>
+            <div class="col-counter" data-aos="zoom-in-up" data-aos-duration="400">
+                <h3>SATISFIED CLIENTS</h3>
+                <p>235</p>
+            </div>
+            <div class="col-counter" data-aos="zoom-in-up" data-aos-duration="600">
+                <h3>YEARS EXPERIENCE</h3>
+                <p>12 +</p>
+            </div>
+            <div class="col-counter" data-aos="zoom-in-up" data-aos-duration="800">
+                <h3>CAR TYPES</h3>
+                <p>18</p>
+            </div>
+        </section>
+        
+        <section id="about" data-aos="zoom-in-down" data-aos-duration="1000">
+            <div class="about-left">
+                <h3>ABOUT US</h3>
+                <h2>PROVIDING RELIABLE CAR RENTALS</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt magnam aliquid, recusandae tempore optio animi dolorum minus asperiores quos? Illo voluptas voluptatum officia eveniet corrupti eaque voluptates distinctio, totam ullam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis magnam laudantium, molestiae optio aspernatur illum.</p>
+                <div class="fila">
+                    <div class="col-about" data-aos="zoom-in" data-aos-duration="600" >
+                        <span><i class="fa-solid fa-shield"></i></span>
+                        <h4>SAFE & TRUSTED</h4>
+                    </div>
+                    <div class="col-about blue" data-aos="zoom-in" data-aos-duration="600">
+                        <span><i class="fa-solid fa-wallet"></i></span>
+                        <h4>AFFORDABLE PRICE</h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="fila">
+                    <div class="col-ceo">
+                        <img src="img/Image-CEO.png" alt="Imagen del CEO">
+                        <div class="datos">
+                            <h3>JAMES AUSTIN</h3>
+                            <p>FOUNDER & CEO</p>
+                        </div>
+                    </div>
+                    <div class="col-ceo-img">
+                        <img src="img/James Austin.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <button onclick="modalVideo()" data-aos="fade-right" data-aos-duration="600" ><i class="fa-solid fa-play"></i></button>
+            </div>
+        </section>
+
+        <section id="carslist">
+            <div class="fila-title" data-aos="zoom-in" data-aos-duration="600">
+                <div class="carslist-left">
+                    <h3>CARS LIST</h3>
+                    <h2>CHOOSE THE CAR THAT YOU NEED</h2>
+                </div>
+                <div class="carslist-right">
+                    <a href="vehicles.html"><button>Discover Vehicles  -</button></a>
+                </div>
+            </div>
+
+            <div class="fila">
+
+
+
+                <div class="col-car" data-aos="fade-down-right" data-aos-duration="800">
+                    <div class="left">
+                        <img src="img/blue-retro.png" alt="Carro Retro">
+                    </div>
+                    <div class="right">
+                        <h3>$69 <span>/ Day</span></h3>
+                        <h2>RETRO ZAPOROZHETS</h2>
+                        <hr>
+                        <ul>
+                            <li><i class="fa-solid fa-gas-pump"></i> Diesel</li>
+                            <li><i class="fa-solid fa-gauge-high"></i> 5.000 miles</li>
+                            <li><i class="fa-solid fa-car-side"></i> Family</li>
+                            <li><i class="fa-solid fa-car"></i> Manual</li>
+                        </ul>
+                        <div class="buttons">
+                            <p>AVAILABLE</p>
+                            <button>Book Now</button>
+                        </div>
+
+                        <p class="discount">20% off</p>
+
+                    </div>
+                </div>
+
+                <div class="col-car" data-aos="fade-up-left" data-aos-duration="1000">
+                    <div class="left">
+                        <img src="img/sport-car-2023.png" alt="Carro Retro">
+                    </div>
+                    <div class="right">
+                        <h3>$79 <span>/ Day</span></h3>
+                        <h2>BLACK NISSAN GT-R</h2>
+                        <hr>
+                        <ul>
+                            <li><i class="fa-solid fa-gas-pump"></i> Diesel</li>
+                            <li><i class="fa-solid fa-gauge-high"></i> 3.000 miles</li>
+                            <li><i class="fa-solid fa-car-side"></i> Sport</li>
+                            <li><i class="fa-solid fa-car"></i> Automatic</li>
+                        </ul>
+                        <div class="buttons">
+                            <p>AVAILABLE</p>
+                            <button>Book Now</button>
+                        </div>
+
+                        <p class="discount">20% off</p>
+
+                    </div>
+                </div>
+
+                <div class="col-car" data-aos="fade-down-right" data-aos-duration="1400">
+                    <div class="left">
+                        <img src="img/studio-shot-of.png" alt="Carro Retro">
+                    </div>
+                    <div class="right">
+                        <h3>$59 <span>/ Day</span></h3>
+                        <h2>VOLKSWAGEN PASSAT</h2>
+                        <hr>
+                        <ul>
+                            <li><i class="fa-solid fa-gas-pump"></i> Diesel</li>
+                            <li><i class="fa-solid fa-gauge-high"></i> 7.000 miles</li>
+                            <li><i class="fa-solid fa-car-side"></i> Family</li>
+                            <li><i class="fa-solid fa-car"></i> Automatic</li>
+                        </ul>
+                        <div class="buttons">
+                            <p>AVAILABLE</p>
+                            <button>Book Now</button>
+                        </div>
+
+                        <p class="discount">20% off</p>
+
+                    </div>
+                </div>
+
+                <div class="col-car" data-aos="fade-up-left" data-aos-duration="1200">
+                    <div class="left">
+                        <img src="img/blue-car.png" alt="Carro Retro">
+                    </div>
+                    <div class="right">
+                        <h3>$60 <span>/ Day</span></h3>
+                        <h2>BRILLIANCE JUNJIE FRV</h2>
+                        <hr>
+                        <ul>
+                            <li><i class="fa-solid fa-gas-pump"></i> Diesel</li>
+                            <li><i class="fa-solid fa-gauge-high"></i> 6.000 miles</li>
+                            <li><i class="fa-solid fa-car-side"></i> Family</li>
+                            <li><i class="fa-solid fa-car"></i> Manual</li>
+                        </ul>
+                        <div class="buttons">
+                            <p>AVAILABLE</p>
+                            <button>Book Now</button>
+                        </div>
+                        
+                        <p class="discount">20% off</p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section id="car-rentals" data-aos="fade-up" data-aos-duration="800">
+            <h3>WHY CHOOSE US</h3>
+            <h2>PROVIDING RELIABLE <br> CAR RENTALS</h2>
+
+            <div class="cont-vehiculo">
+                <img src="img/Image.png" alt="Vehiculo">
+            </div>
+
+            <div class="fila">
+                <div class="item" data-aos="fade-up" data-aos-duration="900">
+                    <span><i class="fa-solid fa-map-location-dot" ></i></span>
+                    <div class="info">
+                        <h4>CROOS COUNTRY DRIVE</h4>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aut iure quae tempore at ad sint accusamus error corrupti impedit!</P>
+                    </div>
+                </div>
+
+                <div class="item" data-aos="fade-up" data-aos-duration="1000">
+                    <span><i class="fa-solid fa-tags"></i></i></span>
+                    <div class="info">
+                        <h4>NO HIDDEN CHARGES</h4>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aut iure quae tempore at ad sint accusamus error corrupti impedit!</P>
+                    </div>
+                </div>
+             
+                <div class="item"  data-aos="fade-down" data-aos-duration="1100" >
+                    <span><i class="fa-solid fa-gauge-high"></i></span>
+                    <div class="info">
+                        <h4>RESERVE ANYTIME</h4>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aut iure quae tempore at ad sint accusamus error corrupti impedit!</P>
+                    </div>
+                </div>
+
+                <div class="item" data-aos="fade-down" data-aos-duration="1200">
+                    <span><i class="fa-solid fa-user-group"></i></span>
+                    <div class="info">
+                        <h4>24/7 SUPPORT</h4>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, aut iure quae tempore at ad sint accusamus error corrupti impedit!</P>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="brands">
+
+            <img src="img/Item 1 (1).png" alt="Item 1"  data-aos="flip-left" data-aos-duration="800">
+            <img src="img/Item 2 (1).png" alt="Item 2" data-aos="flip-right" data-aos-duration="1000">
+            <img src="img/Item 3.png" alt="Item 3"  data-aos="flip-left" data-aos-duration="1200">
+            <img src="img/Item 4.png" alt="Item 4" data-aos="flip-right" data-aos-duration="1400">
+            <img src="img/Item 5.png" alt="Item 5"  data-aos="flip-left" data-aos-duration="1600">
+
+        </section>
+
+        <section id="testimonials">
+
+            <div class="left" data-aos="fade-down" data-aos-duration="800">
+                <h3>TESTIMONIALS</h3>
+                <h2>REVIEWED BY OUR CLIENTS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatibus in debitis autem dolorem reiciendis itaque quisquam illum culpa enim!</p>
+                <a href="rentals.html"><button>Discover More - </button></a>
+            </div>
+
+
+            <div class="right" data-aos="fade-up" data-aos-duration="800">
+
+                <div class="card-testimonial">
+                    <img src="img/Image-22.png" alt="Persona">
+                    <div class="info">
+                        <h4>AARON CALDWELL</h4>
+                        <h5>Freelance Writer</h5>
+
+                        <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem aliquam quia ipsum consequatur aspernatur error corrupti! Aut quae vitae ipsa voluptate dolore harum delectus"</p>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <p><b>5.0</b>/5.0</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="card-testimonial">
+                    <img src="img/Image (1).png" alt="Persona">
+                    <div class="info">
+                        <h4>AMANDA BEATRIX</h4>
+                        <h5>Lawyer</h5>
+    
+                        <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem aliquam quia ipsum consequatur aspernatur error corrupti! Aut quae vitae ipsa voluptate dolore harum delectus"</p>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <p><b>5.0</b>/5.0</p>
+                        </div>
+
+                    </div>
+                 </div>   
+                    
+                    
+               
+
+            </div>
+
+        </section>
+
+        <section id="blog" data-aos="fade-down" data-aos-duration="400" >
+
+            <h3>BLOG & NEWS</h3>
+            <h2>OUR RECENTLY POST</h2>
+
+            <div class="fila">
+
+                <article class="col-blog" data-aos="fade-up" data-aos-duration="800">
+                    <p class="category">Rent Tips</p>
+                    <img src="img/personas2.jpeg" alt="Personas">
+                    <div class="info">
+                        <h4>A COMPLETE GUIDE ON HOW NOT TO BE ACCUSED OF STEALING A RENTED CAR</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, earum excepturi blanditiis incidunt sunt nemo aut. Ratione?</p>
+    
+                        <div class="fila">
+                            <div class="autor">
+                                <img src="img/Image (2).png" alt="Autor">
+                                <p>Abigail Barnes</p>
+                            </div>
+                            <p><i class="fa-solid fa-calendar-days"></i>10 March 2024</p>
+    
+                            <a href="contact-us.html">Read More -</a>
+                        </div>
+    
+                    </div>
+
+                </article>
+
+                <article class="col-blog" data-aos="fade-down" data-aos-duration="800">
+                    <p class="category">New</p>
+                    <img src="img/persona1.jpeg" alt="Persona">
+                    <div class="info">
+                        <h4>TOP 5 MOST PRETIGIOUS SELF-DRIVE CAR RENTAL SERVICES IN TOWN</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, earum excepturi blanditiis incidunt sunt nemo aut. Ratione?</p>
+    
+                        <div class="fila">
+                            <div class="autor">
+                                <img src="img/Image (2).png" alt="Autor">
+                                <p>Abigail Barnes</p>
+                            </div>
+                            <p><i class="fa-solid fa-calendar-days"></i>10 March 2024</p>
+    
+                            <a href="contact-us.html">Read More -</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <a href="contact-us.html"><button data-aos="fade-up" data-aos-duration="2000">Discover More Blog - </button></a>
+
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+
+        <div class="fila" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="600">
+            <div class="col-footer">
+                <a href="index.html"><img src="img/Logo-w.png" alt="Logo"></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut impedit dolor suscipit.</p>
+                <ul>
+                    <a href="https://github.com/Brayandrad3" target="_blank">FB</a>
+                    <p>-</p>
+                    <a href="https://www.instagram.com/brayandrad3?igsh=MWVjeWw2d2dxMWp0&utm_source=qr" target="_blank">IG</a>
+                    <p>-</p>
+                    <a href="https://co.linkedin.com/in/brayan-andrade-12493b2b1" target="_blank">LI</a>
+                    <p>-</p>
+                    <a href="https://github.com/Brayandrad3" target="_blank">YT</a>
+                    <p>-</p>
+                    <a href="https://github.com/Brayandrad3" target="_blank">TV</a>
+                </ul>
+            </div>
+
+            <div class="col-footer">
+                <h3><i class="fa-solid fa-clock"></i>WORKING HOURS</h3>
+                <p>Mon - Fri: 09:00 AM - 09:00 PM</p>
+                <p>Sat: 09:00 AM - 07:00 PM</p>
+                <p>Sun: Closed</p>
+            </div>
+
+            <div class="col-footer">
+                <h3><i class="fa-solid fa-circle-user"></i>QUICK CONTACT</h3>
+                <p>Office: 42 Mariane Parade, Australia</p>
+                <p>Mail: info@8pxlstudio.com</p>
+                <p>Phone: +0123456789</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="fila">
+            <p>Copyright @ 2025 Driveways. All Rights Reserved.</p>
+            <p>Privacy Policy     |     Terms Of Service</p>
+
+        </div>
+
+    </footer>
+
+
+
+    <div id="modal-1">
+        <div class="panel">
+            <h2>CONOCE NUESTROS ULTIMOS VEHICULOS</h2>
+            <button onclick="modalVideo()"><i class="fa-solid fa-circle-xmark"></i></button>
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/1YIiOKVmtO0?si=jOLEKC2DBYq7jyXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="js/main.js"></script>
+   <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
