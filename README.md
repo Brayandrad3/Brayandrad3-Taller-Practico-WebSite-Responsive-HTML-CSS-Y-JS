@@ -39,11 +39,9 @@ El proyecto implementa principios de diseño responsivo para ofrecer una experie
 
 ## 📸 Vista previa
 
-> Agrega aquí una captura de pantalla del proyecto.
 
-```markdown
 ![Vista previa](./img/preview.png)
-```
+
 
 ---
 
